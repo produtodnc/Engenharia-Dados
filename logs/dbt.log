@@ -1,0 +1,188 @@
+[0m08:51:48.876037 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c9ffeb3e2c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c9ffcfd1660>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c9ffcfd1a20>]}
+
+
+============================== 08:51:48.878389 | 6369406b-e9f3-4bc6-bb40-185d0e16f944 ==============================
+[0m08:51:48.878389 [info ] [MainThread]: Running with dbt=1.7.13
+[0m08:51:48.878970 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'profiles_dir': '/home/lkeiti/.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m08:51:48.879598 [info ] [MainThread]: dbt version: 1.7.13
+[0m08:51:48.880089 [info ] [MainThread]: python version: 3.10.12
+[0m08:51:48.880573 [info ] [MainThread]: python path: /home/lkeiti/Documents/dnc-scripts/.env/bin/python3
+[0m08:51:48.881053 [info ] [MainThread]: os info: Linux-6.5.0-27-generic-x86_64-with-glibc2.35
+[0m08:51:49.148678 [info ] [MainThread]: Using profiles dir at /home/lkeiti/.dbt
+[0m08:51:49.149290 [info ] [MainThread]: Using profiles.yml file at /home/lkeiti/.dbt/profiles.yml
+[0m08:51:49.149756 [info ] [MainThread]: Using dbt_project.yml file at /home/lkeiti/Documents/dnc-scripts/dbt-scripts/dbt_project.yml
+[0m08:51:49.150421 [info ] [MainThread]: adapter type: snowflake
+[0m08:51:49.150882 [info ] [MainThread]: adapter version: 1.7.1
+[0m08:51:49.151357 [info ] [MainThread]: Configuration:
+[0m08:51:49.151812 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m08:51:49.152265 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m08:51:49.152715 [info ] [MainThread]: Required dependencies:
+[0m08:51:49.153207 [debug] [MainThread]: Executing "git --help"
+[0m08:51:49.156549 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m08:51:49.157942 [debug] [MainThread]: STDERR: "b''"
+[0m08:51:49.159217 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m08:51:49.159966 [info ] [MainThread]: Connection:
+[0m08:51:49.160712 [info ] [MainThread]:   account: nvjclms-xi38793
+[0m08:51:49.161288 [info ] [MainThread]:   user: dbt
+[0m08:51:49.161794 [info ] [MainThread]:   database: AIRBNB
+[0m08:51:49.162404 [info ] [MainThread]:   warehouse: COMPUTE_WH
+[0m08:51:49.162864 [info ] [MainThread]:   role: transform
+[0m08:51:49.163343 [info ] [MainThread]:   schema: DEV
+[0m08:51:49.163927 [info ] [MainThread]:   authenticator: None
+[0m08:51:49.164563 [info ] [MainThread]:   private_key_path: None
+[0m08:51:49.165192 [info ] [MainThread]:   token: None
+[0m08:51:49.165659 [info ] [MainThread]:   oauth_client_id: None
+[0m08:51:49.166117 [info ] [MainThread]:   query_tag: None
+[0m08:51:49.166635 [info ] [MainThread]:   client_session_keep_alive: False
+[0m08:51:49.167085 [info ] [MainThread]:   host: None
+[0m08:51:49.167533 [info ] [MainThread]:   port: None
+[0m08:51:49.167979 [info ] [MainThread]:   proxy_host: None
+[0m08:51:49.168427 [info ] [MainThread]:   proxy_port: None
+[0m08:51:49.168874 [info ] [MainThread]:   protocol: None
+[0m08:51:49.169341 [info ] [MainThread]:   connect_retries: 1
+[0m08:51:49.169832 [info ] [MainThread]:   connect_timeout: None
+[0m08:51:49.170321 [info ] [MainThread]:   retry_on_database_errors: False
+[0m08:51:49.170775 [info ] [MainThread]:   retry_all: False
+[0m08:51:49.171284 [info ] [MainThread]:   insecure_mode: False
+[0m08:51:49.171770 [info ] [MainThread]:   reuse_connections: None
+[0m08:51:49.172618 [info ] [MainThread]: Registered adapter: snowflake=1.7.1
+[0m08:51:49.173673 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m08:51:49.175064 [debug] [MainThread]: Using snowflake connection "debug"
+[0m08:51:49.175990 [debug] [MainThread]: On debug: select 1 as id
+[0m08:51:49.176594 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m08:51:50.655286 [debug] [MainThread]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m08:51:50.657304 [debug] [MainThread]: On debug: Close
+[0m08:51:51.067767 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m08:51:51.070480 [info ] [MainThread]: [31m1 check failed:[0m
+[0m08:51:51.072977 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </home/lkeiti/Documents/dnc-scripts/dbt-scripts/dbt_project.yml> not found
+
+[0m08:51:51.077433 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 2.243954, "process_user_time": 2.494415, "process_kernel_time": 0.123723, "process_mem_max_rss": "113480", "process_in_blocks": "952", "process_out_blocks": "880", "command_success": false}
+[0m08:51:51.080787 [debug] [MainThread]: Command `dbt debug` failed at 08:51:51.079768 after 2.25 seconds
+[0m08:51:51.083563 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m08:51:51.085813 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c9ffeb3e2c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c9ffbfcca00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c9ffbf50af0>]}
+[0m08:51:51.088281 [debug] [MainThread]: Flushing usage events
+[0m09:04:41.694257 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b5d0b57e2c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b5d09a11660>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b5d09a11a20>]}
+
+
+============================== 09:04:41.696522 | d6fecea4-4ffd-476b-9764-56b2e4856817 ==============================
+[0m09:04:41.696522 [info ] [MainThread]: Running with dbt=1.7.13
+[0m09:04:41.697331 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/lkeiti/.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt init dbtlearn', 'send_anonymous_usage_stats': 'True'}
+[0m09:04:41.698209 [debug] [MainThread]: Starter project path: /home/lkeiti/Documents/dnc-scripts/.env/lib/python3.10/site-packages/dbt/include/starter_project
+[0m09:04:41.700723 [info ] [MainThread]: 
+Your new dbt project "dbtlearn" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m09:04:41.701344 [info ] [MainThread]: Setting up your profile.
+[0m09:05:58.589419 [error] [MainThread]: Encountered an error:
+
+[0m09:05:58.615990 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/lkeiti/Documents/dnc-scripts/.env/lib/python3.10/site-packages/dbt/cli/requires.py", line 91, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/home/lkeiti/Documents/dnc-scripts/.env/lib/python3.10/site-packages/dbt/cli/requires.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/home/lkeiti/Documents/dnc-scripts/.env/lib/python3.10/site-packages/dbt/cli/main.py", line 515, in init
+    results = task.run()
+  File "/home/lkeiti/Documents/dnc-scripts/.env/lib/python3.10/site-packages/dbt/task/init.py", line 344, in run
+    self.setup_profile(profile_name)
+  File "/home/lkeiti/Documents/dnc-scripts/.env/lib/python3.10/site-packages/dbt/task/init.py", line 264, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "/home/lkeiti/Documents/dnc-scripts/.env/lib/python3.10/site-packages/dbt/task/init.py", line 181, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/home/lkeiti/Documents/dnc-scripts/.env/lib/python3.10/site-packages/dbt/task/init.py", line 165, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "/home/lkeiti/Documents/dnc-scripts/.env/lib/python3.10/site-packages/dbt/task/init.py", line 131, in generate_target_from_input
+    target[key] = click.prompt(
+  File "/home/lkeiti/Documents/dnc-scripts/.env/lib/python3.10/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+  File "/home/lkeiti/Documents/dnc-scripts/.env/lib/python3.10/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m09:05:58.617464 [debug] [MainThread]: Resource report: {"command_name": "init", "command_wall_clock_time": 76.9623, "process_user_time": 1.803086, "process_kernel_time": 0.095951, "process_mem_max_rss": "106972", "process_in_blocks": "56", "process_out_blocks": "80", "command_success": false}
+[0m09:05:58.618261 [debug] [MainThread]: Command `dbt init` failed at 09:05:58.618040 after 76.96 seconds
+[0m09:05:58.618750 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b5d0b57e2c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b5d08a95300>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b5d08a95360>]}
+[0m09:05:58.619274 [debug] [MainThread]: Flushing usage events
+[0m09:06:02.488897 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7053142762c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x705312725660>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x705312725a20>]}
+
+
+============================== 09:06:02.491417 | 72702471-9790-464a-b869-671a21429b6f ==============================
+[0m09:06:02.491417 [info ] [MainThread]: Running with dbt=1.7.13
+[0m09:06:02.492183 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/lkeiti/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt init dbtlearn', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m09:06:02.493163 [info ] [MainThread]: A project called dbtlearn already exists here.
+[0m09:06:02.494035 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 0.047056608, "process_user_time": 1.734783, "process_kernel_time": 0.095932, "process_mem_max_rss": "91384", "process_out_blocks": "8", "process_in_blocks": "0"}
+[0m09:06:02.494744 [debug] [MainThread]: Command `dbt init` succeeded at 09:06:02.494579 after 0.05 seconds
+[0m09:06:02.495221 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7053142762c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x705312725a20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x705312725ae0>]}
+[0m09:06:02.495721 [debug] [MainThread]: Flushing usage events
+[0m09:06:12.312856 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7907db27a2c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7907d972be50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7907d9728100>]}
+
+
+============================== 09:06:12.315131 | 4ec95990-0f38-4dc9-ae6c-ccbadbb60831 ==============================
+[0m09:06:12.315131 [info ] [MainThread]: Running with dbt=1.7.13
+[0m09:06:12.315744 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/lkeiti/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt init dbtlearn', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m09:06:12.316587 [debug] [MainThread]: Starter project path: /home/lkeiti/Documents/dnc-scripts/.env/lib/python3.10/site-packages/dbt/include/starter_project
+[0m09:06:12.319074 [info ] [MainThread]: 
+Your new dbt project "dbtlearn" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m09:06:12.319595 [info ] [MainThread]: Setting up your profile.
+[0m09:06:49.635930 [info ] [MainThread]: Profile dbtlearn written to /home/lkeiti/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m09:06:49.640176 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 37.365555, "process_user_time": 1.840544, "process_kernel_time": 0.103805, "process_mem_max_rss": "106720", "process_out_blocks": "88", "process_in_blocks": "0"}
+[0m09:06:49.643137 [debug] [MainThread]: Command `dbt init` succeeded at 09:06:49.642339 after 37.37 seconds
+[0m09:06:49.645333 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7907db27a2c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7907d972beb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7907d9729150>]}
+[0m09:06:49.647696 [debug] [MainThread]: Flushing usage events
+[0m11:31:13.080910 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7669cdb7e9b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7669cc0822c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7669cc082260>]}
+
+
+============================== 11:31:13.083670 | addd2e7e-bc38-4bad-8738-ebc093bbebba ==============================
+[0m11:31:13.083670 [info ] [MainThread]: Running with dbt=1.7.14
+[0m11:31:13.084294 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'profiles_dir': '/home/lkeiti/.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt init dbtairbnb', 'send_anonymous_usage_stats': 'True'}
+[0m11:31:13.085200 [debug] [MainThread]: Starter project path: /home/lkeiti/Documents/dnc-data-engineer/.env/lib/python3.10/site-packages/dbt/include/starter_project
+[0m11:31:13.088072 [info ] [MainThread]: 
+Your new dbt project "dbtairbnb" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m11:31:13.088873 [info ] [MainThread]: Setting up your profile.
+[0m11:35:13.410111 [info ] [MainThread]: Profile dbtairbnb written to /home/lkeiti/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m11:35:13.412452 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 240.37524, "process_user_time": 2.724823, "process_kernel_time": 0.790437, "process_mem_max_rss": "180412", "process_in_blocks": "96", "process_out_blocks": "80"}
+[0m11:35:13.414136 [debug] [MainThread]: Command `dbt init` succeeded at 11:35:13.413680 after 240.38 seconds
+[0m11:35:13.415409 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7669cdb7e9b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7669cc082290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7669cc082350>]}
+[0m11:35:13.417037 [debug] [MainThread]: Flushing usage events
